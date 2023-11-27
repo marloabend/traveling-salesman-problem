@@ -1,0 +1,19 @@
+<div>
+  <canvas #canvas width="720" height="480"></canvas>
+</div>
+<p>
+  <button (click)="newPoints()">New Points</button>
+  <button (click)="solveRandom()">Solve Random</button>
+  <button (click)="solveLexicographic()">Solve Lexicographic</button>
+  <button (click)="stop()">Stop</button>
+</p>
+<div>
+  Sample size: <input type="number" [(ngModel)]="sampleSize" (ngModelChange)="onSampleSizeChange()">
+  {{ sampleSize }}! = {{ possibilities }} possibilities<br>
+  Interval: <input type="number" [(ngModel)]="intervalMs" (ngModelChange)="onIntervalChange()">
+  ms = {{ timeEstimate }} (h:m:s.ms) time to try every possibility<br>
+  Distance: {{ distance }}<br>
+  Record distance: {{ recordDistance }}<br>
+  Counter: {{ counter }}<br>
+  Current best order: {{ currentBestOrder | json }}<br>
+</div>
