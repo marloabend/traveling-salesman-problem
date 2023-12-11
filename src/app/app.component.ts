@@ -199,7 +199,7 @@ export class AppComponent implements AfterViewInit {
     return number;
   }
 
-  private MsToTimeString(s: number): string {
+  private msToTimeString(s: number): string {
     const ms = s % 1000;
     s = (s - ms) / 1000;
     const secs = s % 60;
